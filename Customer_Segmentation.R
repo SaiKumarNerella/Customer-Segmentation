@@ -12,7 +12,7 @@ set.seed(5580)
 
 #PRODUCT BASED#
 #read the csv into a data frame
-prod= read.csv("/Users/saranjyotsingh/Downloads/DM/assignment1/product_cluster.csv")
+prod= read.csv("product_cluster.csv")
 View(prod)
 
 #Visualize data as wrt all the features
@@ -47,7 +47,7 @@ outlier_row_QUANTITY_BOUGHT
 #Outlier: "ITEM_SK" 11740941
 
 #read the csv into a data frame
-item= read.csv("/Users/saranjyotsingh/Downloads/DM/assignment1/item.csv")
+item= read.csv("item.csv")
 #item=item[item$ITEM_SK %in% prod$ITEM_SK,]
 item= item[is.element(item$ITEM_SK, prod$ITEM_SK), ]
 head(item$ITEM_SK, 5) 
